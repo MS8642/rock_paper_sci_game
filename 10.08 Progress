@@ -1,0 +1,34 @@
+# This is a rock , paper , scissors game
+
+import time
+import random
+import re
+i = 0
+j = 0
+npc = ['rock', 'paper' , 'scissors']
+
+print("Lets'play a rock, paper, scissors game!")
+time.sleep(1)
+print("To play the game, you need to type in the prompt what do you think will win, rock or paper or scissors")
+time.sleep(4)
+print("If you will try to put in something else (e.g. Dragon) you will loose because it goes against the rules!")
+time.sleep(4)
+
+while i == 0:
+    inp = input("Are you ready to play the game?")
+    if inp.lower() == 'yes':
+        print("Prepare!")
+        j = 0
+        while j == 0:
+
+            time.sleep(1)
+            shoot = input("What do you think will win?")
+            if inp.lower() == 'rock' or 'paper' or 'scissors':
+                print("Rock! Paper! Scissors! Shoot!")
+                time.sleep(1)
+                npc_select = random.choice(npc)
+                print(npc_select)
+                if str(npc_select) == str(inp):
+                    print("The NPC selected rock as well! It's a draw.")
+                else:
+                    print("Game over! Try again!")
