@@ -1,2 +1,124 @@
 # rock_paper_sci_game
-A rock, paper, scissors game
+# A rock, paper, scissors game
+# Note: the game requires optimization since there is a lot of repetitive code.
+# This is a rock , paper , scissors game
+
+import time
+import random
+import re
+i = 0
+j = 0
+npc = ['rock', 'paper' , 'scissors']
+
+
+print("Lets'play a rock, paper, scissors game!")
+time.sleep(1)
+print("To play the game, you need to type in the prompt what do you think will win, rock or paper or scissors")
+time.sleep(4)
+print("If you will try to put in something else (e.g. Dragon) you will loose because it goes against the rules!")
+time.sleep(4)
+
+while i == 0:
+    inp = input("Are you ready to play the game?")
+    if inp.lower() == 'yes':
+        print("Prepare!")
+        j = 0
+        while j <= 10:
+            if j < 10:
+
+
+                time.sleep(1)
+                shoot = input("What do you think will win?")
+
+                if shoot.lower() == 'rock':
+                    print("Rock! Paper! Scissors! Shoot!")
+                    print(shoot)
+                    time.sleep(1)
+                    npc_select = random.choice(npc)
+                    print(npc_select)
+                    if str(npc_select) == str(shoot):
+                        print("The NPC selected the same as well! It's a draw.")
+                        j += 1
+                    elif str(npc_select) == "paper" and str(shoot) == "rock":
+                        print("Game over! NPC won!")
+                        j += 1
+                    elif str(npc_select) == "scissors" and str(shoot) == "rock":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "rock" and str(shoot) == "paper":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "scissors" and str(shoot) == "paper":
+                        print("Game Over! NPC Won!")
+                        j += 1
+                    elif str(npc_select) == "paper" and str(shoot) == "scissors":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "rock" and str(shoot) == "scissors":
+                        print("Game Over! NPC Won!")
+                        j += 1
+                elif shoot.lower() == 'paper':
+                    print("Rock! Paper! Scissors! Shoot!")
+                    print(shoot)
+                    time.sleep(1)
+                    npc_select = random.choice(npc)
+                    print(npc_select)
+                    if str(npc_select) == str(shoot):
+                        print("The NPC selected the same as well! It's a draw.")
+                        j += 1
+                    elif str(npc_select) == "paper" and str(shoot) == "rock":
+                        print("Game over! NPC won!")
+                        j += 1
+                    elif str(npc_select) == "scissors" and str(shoot) == "rock":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "rock" and str(shoot) == "paper":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "scissors" and str(shoot) == "paper":
+                        print("Game Over! NPC Won!")
+                        j += 1
+                    elif str(npc_select) == "paper" and str(shoot) == "scissors":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "rock" and str(shoot) == "scissors":
+                        print("Game Over! NPC Won!")
+                        j += 1
+                elif shoot.lower() == 'scissors':
+                    print("Rock! Paper! Scissors! Shoot!")
+                    print(shoot)
+                    time.sleep(1)
+                    npc_select = random.choice(npc)
+                    print(npc_select)
+                    if str(npc_select) == str(shoot):
+                        print("The NPC selected the same as well! It's a draw.")
+                        j += 1
+                    elif str(npc_select) == "paper" and str(shoot) == "rock":
+                        print("Game over! NPC won!")
+                        j += 1
+                    elif str(npc_select) == "scissors" and str(shoot) == "rock":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "rock" and str(shoot) == "paper":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "scissors" and str(shoot) == "paper":
+                        print("Game Over! NPC Won!")
+                        j += 1
+                    elif str(npc_select) == "paper" and str(shoot) == "scissors":
+                        print("Congrats! You won!")
+                        j += 1
+                    elif str(npc_select) == "rock" and str(shoot) == "scissors":
+                        print("Game Over! NPC Won!")
+                        j += 1
+                else:
+                    print("Game Over! You loose!")
+                    j += 1
+            elif j == 10:
+                print("Round finished!")
+                j += 1
+
+
+    elif inp.lower() == "no":
+        print("Thank you for using this app!")
+        i = 1
